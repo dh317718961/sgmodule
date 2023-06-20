@@ -490,7 +490,7 @@ export interface Player_Captions_PlayerCaptionsTracklistRenderer {
      */
     defaultAudioTrackIndex?: number;
     /**
-     * @generated from protobuf field: optional int32 defaultCaptionTrackIndex = 6 [json_name = "defaultAudioTrackIndex"];
+     * @generated from protobuf field: optional int32 defaultCaptionTrackIndex = 6;
      */
     defaultCaptionTrackIndex?: number;
 }
@@ -647,23 +647,23 @@ export interface p3F64657230 {
 // message Log{
 //  l1F1 l1F1 = 1;
 // }
-//
+// 
 // message l1F1{
 //  l2F16 l2F16 = 16;
 // }
-//
+// 
 // message l2F16{
 //  l3F7 l3F7 = 7;
 // }
-//
+// 
 // message l3F7{
 //  l4F138536474 l4F138536474 = 138536474;
 // }
-//
+// 
 // message l4F138536474{
 //  l5F1 l5F1 = 1;
 // }
-//
+// 
 // message l5F1{
 //  int32 pip = 30;
 // }
@@ -951,7 +951,6 @@ class Browse$Type extends MessageType<Browse> {
             (u == true ? UnknownFieldHandler.onWrite : u)(this.typeName, message, writer);
         return writer;
     }
-
 }
 /**
  * @generated MessageType for protobuf message Browse
@@ -3150,7 +3149,7 @@ class Player_Captions_PlayerCaptionsTracklistRenderer$Type extends MessageType<P
             { no: 2, name: "audioTracks", kind: "message", repeat: 1 /*RepeatType.PACKED*/, T: () => Player_Captions_PlayerCaptionsTracklistRenderer_AudioTracks },
             { no: 3, name: "translationLanguages", kind: "message", repeat: 1 /*RepeatType.PACKED*/, T: () => Player_Captions_PlayerCaptionsTracklistRenderer_TranslationLanguages },
             { no: 4, name: "defaultAudioTrackIndex", kind: "scalar", opt: true, T: 5 /*ScalarType.INT32*/ },
-            { no: 6, name: "defaultCaptionTrackIndex", kind: "scalar", jsonName: "defaultAudioTrackIndex", opt: true, T: 5 /*ScalarType.INT32*/ }
+            { no: 6, name: "defaultCaptionTrackIndex", kind: "scalar", opt: true, T: 5 /*ScalarType.INT32*/ }
         ]);
     }
     create(value?: PartialMessage<Player_Captions_PlayerCaptionsTracklistRenderer>): Player_Captions_PlayerCaptionsTracklistRenderer {
@@ -3177,7 +3176,7 @@ class Player_Captions_PlayerCaptionsTracklistRenderer$Type extends MessageType<P
                 case /* optional int32 defaultAudioTrackIndex */ 4:
                     message.defaultAudioTrackIndex = reader.int32();
                     break;
-                case /* optional int32 defaultCaptionTrackIndex = 6 [json_name = "defaultAudioTrackIndex"];*/ 6:
+                case /* optional int32 defaultCaptionTrackIndex */ 6:
                     message.defaultCaptionTrackIndex = reader.int32();
                     break;
                 default:
@@ -3204,7 +3203,7 @@ class Player_Captions_PlayerCaptionsTracklistRenderer$Type extends MessageType<P
         /* optional int32 defaultAudioTrackIndex = 4; */
         if (message.defaultAudioTrackIndex !== undefined)
             writer.tag(4, WireType.Varint).int32(message.defaultAudioTrackIndex);
-        /* optional int32 defaultCaptionTrackIndex = 6 [json_name = "defaultAudioTrackIndex"]; */
+        /* optional int32 defaultCaptionTrackIndex = 6; */
         if (message.defaultCaptionTrackIndex !== undefined)
             writer.tag(6, WireType.Varint).int32(message.defaultCaptionTrackIndex);
         let u = options.writeUnknownFields;
